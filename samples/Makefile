@@ -21,6 +21,8 @@ all:
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
     cd "$(MAKEDIR)\simple"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
+    cd "$(MAKEDIR)\python_sleep"
+    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
     cd "$(MAKEDIR)\simple_safe"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
     cd "$(MAKEDIR)\slept"
@@ -84,8 +86,8 @@ all:
     cd "$(MAKEDIR)\tracelnk"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
 !IF "$(DETOURS_TARGET_PROCESSOR)" != "ARM" && "$(DETOURS_TARGET_PROCESSOR)" != "ARM64"
-    cd "$(MAKEDIR)\tryman"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
+#    cd "$(MAKEDIR)\tryman"
+#    @$(MAKE) /NOLOGO /$(MAKEFLAGS)
 !ENDIF
     cd "$(MAKEDIR)\impmunge"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS)
@@ -99,6 +101,8 @@ clean:
     cd "$(MAKEDIR)\syelog"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
     cd "$(MAKEDIR)\simple"
+    @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
+    cd "$(MAKEDIR)\python_sleep"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
     cd "$(MAKEDIR)\simple_safe"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
@@ -152,8 +156,8 @@ clean:
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
     cd "$(MAKEDIR)\tracelnk"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
-    cd "$(MAKEDIR)\tryman"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
+#    cd "$(MAKEDIR)\tryman"
+#    @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
     cd "$(MAKEDIR)\impmunge"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) clean
     cd "$(MAKEDIR)\dynamic_alloc"
@@ -170,6 +174,8 @@ realclean:
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\simple"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
+    cd "$(MAKEDIR)\python_sleep"
+    @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\simple_safe"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\slept"
@@ -222,8 +228,8 @@ realclean:
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\tracelnk"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
-    cd "$(MAKEDIR)\tryman"
-    @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
+#    cd "$(MAKEDIR)\tryman"
+#    @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\impmunge"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) realclean
     cd "$(MAKEDIR)\dynamic_alloc"
@@ -239,6 +245,8 @@ test:
     cd "$(MAKEDIR)\syelog"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) test
     cd "$(MAKEDIR)\simple"
+    @$(MAKE) /NOLOGO /$(MAKEFLAGS) test
+    cd "$(MAKEDIR)\python_sleep"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) test
     cd "$(MAKEDIR)\simple_safe"
     @$(MAKE) /NOLOGO /$(MAKEFLAGS) test
